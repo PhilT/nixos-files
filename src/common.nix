@@ -5,6 +5,7 @@
     ./environment.nix
     ./git.nix
     ./neovim.nix
+    ./ssh.nix
     ./syncthing.nix
     ./tmux.nix
     ./programs.nix

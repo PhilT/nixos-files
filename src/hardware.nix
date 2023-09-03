@@ -14,15 +14,29 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-label/nixos";
+  fileSystems = {
+    "/" = {
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "size=2G" "mode=755" ];
+    };
+
+    "/home/phil" = {
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "size=2G" "mode=777" ];
+    };
+
+    "/persist" = {
+      device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-label/boot";
+    "/boot" = {
+      device = "/dev/disk/by-label/boot";
       fsType = "vfat";
     };
+  };
 
   swapDevices =
     [ { device = "/dev/disk/by-label/swap"; }
