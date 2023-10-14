@@ -42,7 +42,7 @@ in
 
       gamescope     # Run older games with upscaling and other options to support running on newer hardware
       lutris        # For non-steam games from other app stores or local, also supports steam games
-      monado        # Open source OpenXR VR drivers with support for VR
+      (callPackage ./monado.nix {inherit (gst_all_1) gstreamer gst-plugins-base;})  # Open source OpenXR VR drivers with support for VR
       opencomposite # Translate OpenVR to OpenXR calls (e.g. for rFactor 2)
       xrgears       # OpenXR app for testing. Start monado with `monado-service` then run `xrgears`
 
