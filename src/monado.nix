@@ -32,6 +32,7 @@
 , libxcb
 , onnxruntime
 , opencv4
+, openhmd
 , openvr
 , udev
 , vulkan-headers
@@ -48,17 +49,6 @@
 , serviceSupport ? true
 }:
 
-#let
-#  openhmdG2Branch = openhmd.overrideAttrs (old: {
-#    version = "2023-10-13";
-#    src = fetchFromGitHub {
-#      owner = "thaytan";
-#      repo = "OpenHMD";
-#      rev = "dev-reverb-g2";
-#      sha256 = "sha256-AVbU2dSaSSrW7n6WTSPQzNzAf0DZNnJljFNmlr7YMSE=";
-#    };
-#  });
-#in
 stdenv.mkDerivation rec {
   pname = "monado";
   version = "unstable-2023-10-14";
@@ -109,7 +99,7 @@ stdenv.mkDerivation rec {
     libxcb
     onnxruntime
     opencv4
-    #openhmdG2Branch
+    openhmd
     openvr
     udev
     vulkan-headers

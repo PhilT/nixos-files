@@ -45,6 +45,7 @@ in
       (callPackage ./monado.nix {inherit (gst_all_1) gstreamer gst-plugins-base;})  # Open source OpenXR VR drivers with support for VR
       opencomposite # Translate OpenVR to OpenXR calls (e.g. for rFactor 2)
       xrgears       # OpenXR app for testing. Start monado with `monado-service` then run `xrgears`
+      git-lfs
 
       openxr-loader # Needed to run OpenXR games
 

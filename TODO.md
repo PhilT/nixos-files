@@ -1,6 +1,7 @@
+[ ] Add https://gitlab.freedesktop.org/monado/monado/-/blob/main/scripts/get-ht-models.sh to monado.nix
 [ ] Customise cmus, (play/pause key binding), status bar view, etc
 [ ] Configure Matrix
-[ ] Fix Himalaya - Switch off sync
+[x] Fix Himalaya - Switch off sync
 [ ] Research a contact management store that can be accessed with dmenu or the himalaya vim plugin
 [ ] Add shortcut for Slack
 [x] Fix flameshot not loading on startup
